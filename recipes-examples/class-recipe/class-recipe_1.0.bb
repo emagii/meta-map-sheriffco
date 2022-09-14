@@ -8,9 +8,9 @@ SRC_URI = " \
 	file://class/Makefile \
 "
 
-EXTRA_OEMAKE_class-development = 'CFLAGS="${CFLAGS} -DDEVELOPMENT"'
-EXTRA_OEMAKE_class-production  = 'CFLAGS="${CFLAGS} -DPRODUCTION"'
-EXTRA_OEMAKE_class-release     = 'CFLAGS="${CFLAGS} -DRELEASE"'
+EXTRA_OEMAKE:class-development = 'CFLAGS="${CFLAGS} -DDEVELOPMENT"'
+EXTRA_OEMAKE:class-production  = 'CFLAGS="${CFLAGS} -DPRODUCTION"'
+EXTRA_OEMAKE:class-release     = 'CFLAGS="${CFLAGS} -DRELEASE"'
 
 do_install-class-development () {
 	install	-d	${D}${bindir}
